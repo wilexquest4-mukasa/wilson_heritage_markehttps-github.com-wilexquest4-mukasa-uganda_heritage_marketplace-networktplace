@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Uganda Heritage Marketplace</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fugandaher4307back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                        <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-heading font-bold text-text-primary">Uganda Heritage</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product_catalog.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Marketplace</a>
+                    <a href="artisan_profiles.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Artisans</a>
+                    <a href="cultural_heritage_hub.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Heritage Hub</a>
+                    <a href="shopping_cart.html" class="text-primary font-medium">Cart</a>
+                    <a href="artisan_dashboard.html" class="bg-primary text-white px-4 py-2 rounded-heritage hover:bg-primary-600 transition-colors duration-normal">Dashboard</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-heading font-bold text-text-primary mb-2">Shopping Cart</h1>
+                    <p class="text-text-secondary">Review your selected heritage crafts and proceed to checkout</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="text-sm text-text-secondary">3 items in cart</span>
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-medium">3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Content -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Cart Items Section -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Cultural Pattern Divider -->
+                <div class="border-t-2 border-accent-200 relative">
+                    <div class="absolute -top-1 left-0 w-16 h-2 bg-primary"></div>
+                    <div class="absolute -top-1 left-20 w-8 h-2 bg-accent"></div>
+                    <div class="absolute -top-1 left-32 w-12 h-2 bg-secondary"></div>
+                </div>
+
+                <!-- Cart Item 1 -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Product Image -->
+                        <div class="flex-shrink-0">
+                            <div class="w-full md:w-32 h-32 bg-surface rounded-heritage overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Traditional Woven Basket" class="w-full h-full object-cover" onerror="this.src='https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="flex-grow">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">
+                                        <a href="product_catalog.html" class="hover:text-primary transition-colors duration-normal">Ekibbo Traditional Woven Basket</a>
+                                    </h3>
+                                    <p class="text-text-secondary mb-2">by <a href="artisan_profiles.html" class="text-primary hover:underline">Sarah Nakamya</a></p>
+                                    <p class="text-sm text-text-secondary mb-3">Handwoven from natural raffia palm fibers using traditional Buganda coiling techniques passed down for generations. Features traditional 'Ensiko' geometric patterns symbolizing unity and prosperity.</p>
+                                    
+                                    <!-- Quantity Controls -->
+                                    <div class="flex items-center space-x-4">
+                                        <span class="text-sm font-medium text-text-primary">Quantity:</span>
+                                        <div class="flex items-center border border-accent-200 rounded-heritage">
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item1', -1)">-</button>
+                                            <span id="quantity-item1" class="px-4 py-1 border-l border-r border-accent-200">2</span>
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item1', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Price and Actions -->
+                                <div class="text-right">
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Unit Price</div>
+                                        <div class="text-lg font-semibold text-text-primary">UGX 45,000</div>
+                                        <div class="text-sm text-text-secondary">($12.50 USD)</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Subtotal</div>
+                                        <div class="text-xl font-bold text-primary" id="subtotal-item1">UGX 90,000</div>
+                                        <div class="text-sm text-text-secondary">($25.00 USD)</div>
+                                    </div>
+                                    <div class="flex flex-col space-y-2">
+                                        <button class="text-sm text-accent hover:text-accent-600 transition-colors duration-normal">Save for Later</button>
+                                        <button class="text-sm text-error hover:text-error-600 transition-colors duration-normal" onclick="removeItem('item1')">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Product Image -->
+                        <div class="flex-shrink-0">
+                            <div class="w-full md:w-32 h-32 bg-surface rounded-heritage overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ceramic Water Pot" class="w-full h-full object-cover" onerror="this.src='https://images.pixabay.com/photo-2017/08/07/14/02/people-2604149_1280.jpg'; this.onerror=null;" />
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="flex-grow">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">
+                                        <a href="product_catalog.html" class="hover:text-primary transition-colors duration-normal">Ensunu Traditional Clay Water Pot</a>
+                                    </h3>
+                                    <p class="text-text-secondary mb-2">by <a href="artisan_profiles.html" class="text-primary hover:underline">Moses Kiprotich</a></p>
+                                    <p class="text-sm text-text-secondary mb-3">Hand-thrown from local Ankole red clay using ancient pottery techniques. Features traditional Kinyankole decorative patterns and natural cooling properties perfect for storing water.</p>
+                                    
+                                    <!-- Quantity Controls -->
+                                    <div class="flex items-center space-x-4">
+                                        <span class="text-sm font-medium text-text-primary">Quantity:</span>
+                                        <div class="flex items-center border border-accent-200 rounded-heritage">
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item2', -1)">-</button>
+                                            <span id="quantity-item2" class="px-4 py-1 border-l border-r border-accent-200">1</span>
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item2', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Price and Actions -->
+                                <div class="text-right">
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Unit Price</div>
+                                        <div class="text-lg font-semibold text-text-primary">UGX 75,000</div>
+                                        <div class="text-sm text-text-secondary">($20.83 USD)</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Subtotal</div>
+                                        <div class="text-xl font-bold text-primary" id="subtotal-item2">UGX 75,000</div>
+                                        <div class="text-sm text-text-secondary">($20.83 USD)</div>
+                                    </div>
+                                    <div class="flex flex-col space-y-2">
+                                        <button class="text-sm text-accent hover:text-accent-600 transition-colors duration-normal">Save for Later</button>
+                                        <button class="text-sm text-error hover:text-error-600 transition-colors duration-normal" onclick="removeItem('item2')">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Item 3 -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Product Image -->
+                        <div class="flex-shrink-0">
+                            <div class="w-full md:w-32 h-32 bg-surface rounded-heritage overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wooden Sculpture" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="flex-grow">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">
+                                        <a href="product_catalog.html" class="hover:text-primary transition-colors duration-normal">Enjovu Carved Mahogany Elephant</a>
+                                    </h3>
+                                    <p class="text-text-secondary mb-2">by <a href="artisan_profiles.html" class="text-primary hover:underline">James Mukasa</a></p>
+                                    <p class="text-sm text-text-secondary mb-3">Hand-carved from sustainably sourced Ugandan mahogany using traditional Buganda woodcarving techniques. Represents strength, wisdom, and the connection between humans and nature in African culture.</p>
+                                    
+                                    <!-- Quantity Controls -->
+                                    <div class="flex items-center space-x-4">
+                                        <span class="text-sm font-medium text-text-primary">Quantity:</span>
+                                        <div class="flex items-center border border-accent-200 rounded-heritage">
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item3', -1)">-</button>
+                                            <span id="quantity-item3" class="px-4 py-1 border-l border-r border-accent-200">1</span>
+                                            <button class="px-3 py-1 hover:bg-surface transition-colors duration-normal" onclick="updateQuantity('item3', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Price and Actions -->
+                                <div class="text-right">
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Unit Price</div>
+                                        <div class="text-lg font-semibold text-text-primary">UGX 120,000</div>
+                                        <div class="text-sm text-text-secondary">($33.33 USD)</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="text-sm text-text-secondary mb-1">Subtotal</div>
+                                        <div class="text-xl font-bold text-primary" id="subtotal-item3">UGX 120,000</div>
+                                        <div class="text-sm text-text-secondary">($33.33 USD)</div>
+                                    </div>
+                                    <div class="flex flex-col space-y-2">
+                                        <button class="text-sm text-accent hover:text-accent-600 transition-colors duration-normal">Save for Later</button>
+                                        <button class="text-sm text-error hover:text-error-600 transition-colors duration-normal" onclick="removeItem('item3')">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Shopping -->
+                <div class="text-center py-6">
+                    <a href="product_catalog.html" class="inline-flex items-center text-primary hover:text-primary-600 transition-colors duration-normal">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                        Continue Shopping
+                    </a>
+                </div>
+            </div>
+
+            <!-- Order Summary Section -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6 sticky top-24">
+                    <!-- Order Summary Header -->
+                    <div class="border-b border-accent-200 pb-4 mb-6">
+                        <h2 class="text-2xl font-heading font-semibold text-text-primary">Order Summary</h2>
+                    </div>
+
+                    <!-- Promotional Code -->
+                    <div class="mb-6">
+                        <label for="promoCode" class="block text-sm font-medium text-text-primary mb-2">Promotional Code</label>
+                        <div class="flex space-x-2">
+                            <input type="text" id="promoCode" placeholder="Enter code" class="flex-grow px-3 py-2 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" />
+                            <button onclick="applyPromoCode()" class="px-4 py-2 bg-accent text-white rounded-heritage hover:bg-accent-600 transition-colors duration-normal">Apply</button>
+                        </div>
+                    </div>
+
+                    <!-- Price Breakdown -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Subtotal (3 items)</span>
+                            <span class="font-medium text-text-primary" id="cartSubtotal">UGX 285,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Estimated Shipping</span>
+                            <span class="font-medium text-text-primary" id="shippingCost">UGX 15,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Tax</span>
+                            <span class="font-medium text-text-primary">UGX 0</span>
+                        </div>
+                        <div id="discountRow" class="flex justify-between hidden">
+                            <span class="text-success">Discount Applied</span>
+                            <span class="font-medium text-success" id="discountAmount">-UGX 0</span>
+                        </div>
+                        <div class="border-t border-accent-200 pt-4">
+                            <div class="flex justify-between">
+                                <span class="text-lg font-semibold text-text-primary">Total</span>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-primary" id="cartTotal">UGX 300,000</div>
+                                    <div class="text-sm text-text-secondary">($83.33 USD)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Options -->
+                    <div class="mb-6">
+                        <h3 class="font-medium text-text-primary mb-3">Shipping Options</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                <input type="radio" name="shipping" value="standard" checked class="text-primary focus:ring-primary border-accent-300" />
+                                <div class="ml-3 flex-grow">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-text-primary">Standard Delivery</span>
+                                        <span class="text-text-primary">UGX 15,000</span>
+                                    </div>
+                                    <div class="text-sm text-text-secondary">5-7 business days</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                <input type="radio" name="shipping" value="express" class="text-primary focus:ring-primary border-accent-300" />
+                                <div class="ml-3 flex-grow">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-text-primary">Express Delivery</span>
+                                        <span class="text-text-primary">UGX 35,000</span>
+                                    </div>
+                                    <div class="text-sm text-text-secondary">2-3 business days</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                <input type="radio" name="shipping" value="international" class="text-primary focus:ring-primary border-accent-300" />
+                                <div class="ml-3 flex-grow">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-text-primary">International</span>
+                                        <span class="text-text-primary">UGX 85,000</span>
+                                    </div>
+                                    <div class="text-sm text-text-secondary">10-14 business days</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Impact Metrics -->
+                    <div class="mb-6 p-4 bg-success-50 rounded-heritage">
+                        <h3 class="font-medium text-success-800 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Community Impact
+                        </h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-success-700">Artisans Supported</span>
+                                <span class="font-medium text-success-800">3</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-success-700">Communities Benefited</span>
+                                <span class="font-medium text-success-800">2</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-success-700">Heritage Preservation</span>
+                                <span class="font-medium text-success-800">100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <button onclick="proceedToCheckout()" class="w-full bg-primary text-white py-4 rounded-heritage font-semibold hover:bg-primary-600 transition-colors duration-normal mb-4">
+                        Proceed to Secure Checkout
+                    </button>
+
+                    <!-- Security Badge -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center text-sm text-text-secondary">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Secure SSL Encryption
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Sticky Footer (Hidden on Desktop) -->
+        <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-accent-200 p-4 z-40">
+            <div class="flex items-center justify-between mb-3">
+                <div>
+                    <div class="text-lg font-bold text-primary">UGX 300,000</div>
+                    <div class="text-sm text-text-secondary">3 items • Free shipping</div>
+                </div>
+                <button onclick="proceedToCheckout()" class="bg-primary text-white px-6 py-3 rounded-heritage font-semibold hover:bg-primary-600 transition-colors duration-normal">
+                    Checkout
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Padding Bottom -->
+        <div class="lg:hidden h-20"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                            <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                        </svg>
+                        <span class="ml-2 text-lg font-heading font-bold">Uganda Heritage</span>
+                    </div>
+                    <p class="text-secondary-200 text-sm">Connecting authentic Ugandan crafts with the world</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">For Artisans</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="artisan_registration.html" class="hover:text-white transition-colors duration-normal">Join as Artisan</a></li>
+                        <li><a href="artisan_dashboard.html" class="hover:text-white transition-colors duration-normal">Artisan Dashboard</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Seller Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Marketplace</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="product_catalog.html" class="hover:text-white transition-colors duration-normal">Browse Products</a></li>
+                        <li><a href="artisan_profiles.html" class="hover:text-white transition-colors duration-normal">Meet Artisans</a></li>
+                        <li><a href="cultural_heritage_hub.html" class="hover:text-white transition-colors duration-normal">Heritage Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Shipping Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-8 pt-8 text-center text-sm text-secondary-200">
+                <p>© 2025 Uganda Heritage Marketplace. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cart data
+        const cartItems = {
+            item1: { price: 45000, quantity: 2 },
+            item2: { price: 75000, quantity: 1 },
+            item3: { price: 120000, quantity: 1 }
+        };
+
+        const shippingRates = {
+            standard: 15000,
+            express: 35000,
+            international: 85000
+        };
+
+        let currentShipping = 'standard';
+        let discountPercent = 0;
+
+        // Update quantity function
+        window.updateQuantity = function(itemId, change) {
+            const quantityEl = document.getElementById(`quantity-${itemId}`);
+            const subtotalEl = document.getElementById(`subtotal-${itemId}`);
+            
+            let newQuantity = cartItems[itemId].quantity + change;
+            if (newQuantity < 1) newQuantity = 1;
+            if (newQuantity > 10) newQuantity = 10;
+            
+            cartItems[itemId].quantity = newQuantity;
+            quantityEl.textContent = newQuantity;
+            
+            const subtotal = cartItems[itemId].price * newQuantity;
+            subtotalEl.textContent = `UGX ${subtotal.toLocaleString()}`;
+            
+            updateCartTotals();
+        };
+
+        // Remove item function
+        window.removeItem = function(itemId) {
+            if (confirm('Are you sure you want to remove this item from your cart?')) {
+                const itemElement = document.getElementById(`quantity-${itemId}`).closest('.bg-white');
+                itemElement.style.opacity = '0.5';
+                
+                setTimeout(() => {
+                    delete cartItems[itemId];
+                    itemElement.remove();
+                    updateCartTotals();
+                    updateItemCount();
+                }, 300);
+            }
+        };
+
+        // Apply promo code function
+        window.applyPromoCode = function() {
+            const promoInput = document.getElementById('promoCode');
+            const code = promoInput.value.trim().toUpperCase();
+            const discountRow = document.getElementById('discountRow');
+            const discountAmount = document.getElementById('discountAmount');
+            
+            // Mock promo codes
+            const promoCodes = {
+                'HERITAGE10': 10,
+                'ARTISAN15': 15,
+                'WELCOME20': 20
+            };
+            
+            if (promoCodes[code]) {
+                discountPercent = promoCodes[code];
+                discountRow.classList.remove('hidden');
+                promoInput.style.borderColor = '#228B22';
+                promoInput.style.backgroundColor = '#F0F9F0';
+                
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.className = 'text-sm text-success mt-1';
+                successMsg.textContent = `Promo code applied! ${discountPercent}% discount`;
+                promoInput.parentNode.appendChild(successMsg);
+                
+                setTimeout(() => successMsg.remove(), 3000);
+            } else if (code) {
+                promoInput.style.borderColor = '#B22222';
+                promoInput.style.backgroundColor = '#F9F0F0';
+                
+                // Show error message
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'text-sm text-error mt-1';
+                errorMsg.textContent = 'Invalid promo code';
+                promoInput.parentNode.appendChild(errorMsg);
+                
+                setTimeout(() => errorMsg.remove(), 3000);
+            }
+            
+            updateCartTotals();
+        };
+
+        // Update cart totals
+        function updateCartTotals() {
+            let subtotal = 0;
+            Object.values(cartItems).forEach(item => {
+                subtotal += item.price * item.quantity;
+            });
+            
+            const shipping = shippingRates[currentShipping];
+            const discount = Math.round(subtotal * (discountPercent / 100));
+            const total = subtotal + shipping - discount;
+            
+            document.getElementById('cartSubtotal').textContent = `UGX ${subtotal.toLocaleString()}`;
+            document.getElementById('shippingCost').textContent = `UGX ${shipping.toLocaleString()}`;
+            document.getElementById('discountAmount').textContent = `-UGX ${discount.toLocaleString()}`;
+            document.getElementById('cartTotal').textContent = `UGX ${total.toLocaleString()}`;
+            
+            // Update mobile footer
+            const mobileTotal = document.querySelector('.lg\\:hidden .text-lg');
+            if (mobileTotal) {
+                mobileTotal.textContent = `UGX ${total.toLocaleString()}`;
+            }
+        }
+
+        // Update item count - Fixed to avoid CSS :contains() selector error
+        function updateItemCount() {
+            const totalItems = Object.values(cartItems).reduce((sum, item) => sum + item.quantity, 0);
+            
+            // Find elements by text content instead of using invalid CSS selector
+            const allTextElements = document.querySelectorAll('.text-sm');
+            allTextElements.forEach(el => {
+                if (el.textContent && el.textContent.includes('items in cart')) {
+                    el.textContent = `${totalItems} items in cart`;
+                }
+            });
+            
+            // Update mobile footer item count
+            const mobileItemsElement = document.querySelector('.lg\\:hidden .text-sm');
+            if (mobileItemsElement && mobileItemsElement.textContent.includes('items')) {
+                mobileItemsElement.textContent = `${totalItems} items • Free shipping`;
+            }
+            
+            // Update cart badge
+            const badgeElement = document.querySelector('.bg-primary.rounded-full');
+            if (badgeElement) {
+                badgeElement.textContent = totalItems;
+            }
+        }
+
+        // Shipping option change handler
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                currentShipping = this.value;
+                updateCartTotals();
+            });
+        });
+
+        // Proceed to checkout function
+        window.proceedToCheckout = function() {
+            // Validate cart
+            if (Object.keys(cartItems).length === 0) {
+                alert('Your cart is empty. Please add some items before checkout.');
+                return;
+            }
+            
+            // Show loading state
+            const checkoutBtn = document.querySelector('button[onclick="proceedToCheckout()"]');
+            const originalText = checkoutBtn.textContent;
+            checkoutBtn.textContent = 'Processing...';
+            checkoutBtn.disabled = true;
+            
+            // Simulate checkout process
+            setTimeout(() => {
+                alert('Redirecting to secure checkout...');
+                // In a real application, this would redirect to checkout page
+                checkoutBtn.textContent = originalText;
+                checkoutBtn.disabled = false;
+            }, 2000);
+        };
+
+        // Initialize cart
+        updateCartTotals();
+        updateItemCount();
+
+        // Add swipe-to-remove functionality for mobile
+        if ('ontouchstart' in window) {
+            let startX, startY, currentX, currentY;
+            
+            document.querySelectorAll('.bg-white.rounded-heritage-lg').forEach(item => {
+                item.addEventListener('touchstart', function(e) {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                });
+                
+                item.addEventListener('touchmove', function(e) {
+                    if (!startX || !startY) return;
+                    
+                    currentX = e.touches[0].clientX;
+                    currentY = e.touches[0].clientY;
+                    
+                    const diffX = startX - currentX;
+                    const diffY = startY - currentY;
+                    
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                        if (diffX > 0) {
+                            // Swiped left - show remove option
+                            this.style.transform = 'translateX(-20px)';
+                            this.style.backgroundColor = '#F9F0F0';
+                        }
+                    }
+                });
+                
+                item.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                    this.style.backgroundColor = '';
+                    startX = startY = currentX = currentY = null;
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>

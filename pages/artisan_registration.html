@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artisan Registration - Uganda Heritage Marketplace</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fugandaher4307back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                        <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-heading font-bold text-text-primary">Uganda Heritage</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product_catalog.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Marketplace</a>
+                    <a href="artisan_profiles.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Artisans</a>
+                    <a href="cultural_heritage_hub.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Heritage Hub</a>
+                    <a href="shopping_cart.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Cart</a>
+                    <a href="artisan_dashboard.html" class="bg-primary text-white px-4 py-2 rounded-heritage hover:bg-primary-600 transition-colors duration-normal">Dashboard</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-heading font-bold text-text-primary mb-4">Join Our Artisan Community</h1>
+            <p class="text-lg text-text-secondary max-w-2xl mx-auto">Share your craft with the world and connect with buyers who appreciate authentic Ugandan heritage</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Registration Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-heritage-lg shadow-medium p-8">
+                    <!-- Progress Indicator -->
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-medium text-primary">Step 1 of 3</span>
+                            <span class="text-sm text-text-secondary">Personal Information</span>
+                        </div>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full transition-all duration-normal" style="width: 33%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <form id="artisanRegistrationForm" class="space-y-6">
+                        <!-- Personal Information Section -->
+                        <div id="step1" class="space-y-6">
+                            <div class="border-l-4 border-primary pl-4 mb-6">
+                                <h2 class="text-2xl font-heading font-semibold text-text-primary">Personal Information</h2>
+                                <p class="text-text-secondary">Tell us about yourself and your craft background</p>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-text-primary mb-2">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Enter your first name" />
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-text-primary mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Enter your last name" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="your.email@example.com" />
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-text-primary mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="+256 700 000 000" />
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="district" class="block text-sm font-medium text-text-primary mb-2">District *</label>
+                                    <select id="district" name="district" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal">
+                                        <option value>Select your district</option>
+                                        <option value="kampala">Kampala</option>
+                                        <option value="wakiso">Wakiso</option>
+                                        <option value="mukono">Mukono</option>
+                                        <option value="jinja">Jinja</option>
+                                        <option value="masaka">Masaka</option>
+                                        <option value="mbarara">Mbarara</option>
+                                        <option value="gulu">Gulu</option>
+                                        <option value="lira">Lira</option>
+                                        <option value="fort-portal">Fort Portal</option>
+                                        <option value="mbale">Mbale</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="village" class="block text-sm font-medium text-text-primary mb-2">Village/Town</label>
+                                    <input type="text" id="village" name="village" class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Enter your village or town" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="bio" class="block text-sm font-medium text-text-primary mb-2">Brief Bio</label>
+                                <textarea id="bio" name="bio" rows="4" class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Tell us about your background and what inspired you to become an artisan..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Craft Specialization Section (Hidden initially) -->
+                        <div id="step2" class="space-y-6 hidden">
+                            <div class="border-l-4 border-primary pl-4 mb-6">
+                                <h2 class="text-2xl font-heading font-semibold text-text-primary">Craft Specialization</h2>
+                                <p class="text-text-secondary">Select your craft categories and experience level</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-4">Primary Craft Categories *</label>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="weaving" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Traditional Weaving</div>
+                                            <div class="text-sm text-text-secondary">Baskets, mats, textiles</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="pottery" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Pottery & Ceramics</div>
+                                            <div class="text-sm text-text-secondary">Pots, bowls, decorative items</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="woodcarving" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Wood Carving</div>
+                                            <div class="text-sm text-text-secondary">Sculptures, masks, furniture</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="fashion" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Traditional Fashion</div>
+                                            <div class="text-sm text-text-secondary">Clothing, accessories, jewelry</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="traditional" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Traditional Crafts</div>
+                                            <div class="text-sm text-text-secondary">Musical instruments, tools</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-accent-200 rounded-heritage hover:bg-surface cursor-pointer transition-colors duration-normal">
+                                        <input type="checkbox" name="craftCategories" value="other" class="text-primary focus:ring-primary border-accent-300 rounded" />
+                                        <div class="ml-3">
+                                            <div class="font-medium text-text-primary">Other Crafts</div>
+                                            <div class="text-sm text-text-secondary">Specify in description</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="experience" class="block text-sm font-medium text-text-primary mb-2">Years of Experience *</label>
+                                <select id="experience" name="experience" required class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal">
+                                    <option value>Select experience level</option>
+                                    <option value="1-2">1-2 years (Beginner)</option>
+                                    <option value="3-5">3-5 years (Intermediate)</option>
+                                    <option value="6-10">6-10 years (Advanced)</option>
+                                    <option value="10+">10+ years (Master Craftsman)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="culturalBackground" class="block text-sm font-medium text-text-primary mb-2">Cultural Heritage Background</label>
+                                <textarea id="culturalBackground" name="culturalBackground" rows="4" class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Share the cultural significance of your craft, traditional techniques passed down through generations, or regional influences..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Upload Section (Hidden initially) -->
+                        <div id="step3" class="space-y-6 hidden">
+                            <div class="border-l-4 border-primary pl-4 mb-6">
+                                <h2 class="text-2xl font-heading font-semibold text-text-primary">Portfolio Upload</h2>
+                                <p class="text-text-secondary">Showcase your best work to attract buyers</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-4">Upload Your Craft Images *</label>
+                                <div id="dropZone" class="border-2 border-dashed border-accent-300 rounded-heritage-lg p-8 text-center hover:border-primary transition-colors duration-normal cursor-pointer">
+                                    <svg class="mx-auto h-12 w-12 text-accent-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                    </svg>
+                                    <p class="text-lg font-medium text-text-primary mb-2">Drop your images here or click to browse</p>
+                                    <p class="text-sm text-text-secondary">PNG, JPG, JPEG up to 5MB each. Maximum 10 images.</p>
+                                    <input type="file" id="portfolioImages" name="portfolioImages" multiple accept="image/*" class="hidden" />
+                                </div>
+                                
+                                <!-- Image Preview Grid -->
+                                <div id="imagePreview" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 hidden">
+                                    <!-- Preview thumbnails will be inserted here -->
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="portfolioDescription" class="block text-sm font-medium text-text-primary mb-2">Portfolio Description</label>
+                                <textarea id="portfolioDescription" name="portfolioDescription" rows="4" class="w-full px-4 py-3 border border-accent-200 rounded-heritage focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-normal" placeholder="Describe the pieces in your portfolio, techniques used, and what makes your work unique..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Form Navigation -->
+                        <div class="flex justify-between pt-6 border-t border-accent-200">
+                            <button type="button" id="prevBtn" class="px-6 py-3 border border-accent-300 text-text-secondary rounded-heritage hover:bg-surface transition-colors duration-normal hidden">
+                                Previous
+                            </button>
+                            <div class="flex space-x-4">
+                                <button type="button" id="saveDraftBtn" class="px-6 py-3 border border-primary text-primary rounded-heritage hover:bg-primary-50 transition-colors duration-normal">
+                                    Save Draft
+                                </button>
+                                <button type="button" id="nextBtn" class="px-6 py-3 bg-primary text-white rounded-heritage hover:bg-primary-600 transition-colors duration-normal">
+                                    Next Step
+                                </button>
+                                <button type="submit" id="submitBtn" class="px-6 py-3 bg-success text-white rounded-heritage hover:bg-success-600 transition-colors duration-normal hidden">
+                                    Submit for Review
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Verification Requirements Panel -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6 sticky top-24">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">Verification Requirements</h3>
+                        <p class="text-sm text-text-secondary">Complete these steps to earn your authenticity badge</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Complete Profile</h4>
+                                <p class="text-sm text-text-secondary">Fill all required information fields</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="text-xs font-medium text-accent-600">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Portfolio Submission</h4>
+                                <p class="text-sm text-text-secondary">Upload at least 5 high-quality images</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="text-xs font-medium text-accent-600">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Identity Verification</h4>
+                                <p class="text-sm text-text-secondary">Provide valid ID and contact verification</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="text-xs font-medium text-accent-600">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Craft Authentication</h4>
+                                <p class="text-sm text-text-secondary">Review by cultural heritage experts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-primary-50 rounded-heritage">
+                        <h4 class="font-medium text-primary mb-2">Authenticity Badge Benefits</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• Higher visibility in search results</li>
+                            <li>• Premium seller status</li>
+                            <li>• Access to featured artisan programs</li>
+                            <li>• Direct buyer messaging</li>
+                            <li>• Bulk order opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Ugandan artisan at work" class="w-full h-32 object-cover rounded-heritage mb-4" onerror="this.src='https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
+                        <p class="text-sm text-text-secondary italic">"Join thousands of artisans preserving Uganda's cultural heritage"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                            <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                        </svg>
+                        <span class="ml-2 text-lg font-heading font-bold">Uganda Heritage</span>
+                    </div>
+                    <p class="text-secondary-200 text-sm">Connecting authentic Ugandan crafts with the world</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">For Artisans</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="artisan_registration.html" class="hover:text-white transition-colors duration-normal">Join as Artisan</a></li>
+                        <li><a href="artisan_dashboard.html" class="hover:text-white transition-colors duration-normal">Artisan Dashboard</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Seller Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Marketplace</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="product_catalog.html" class="hover:text-white transition-colors duration-normal">Browse Products</a></li>
+                        <li><a href="artisan_profiles.html" class="hover:text-white transition-colors duration-normal">Meet Artisans</a></li>
+                        <li><a href="cultural_heritage_hub.html" class="hover:text-white transition-colors duration-normal">Heritage Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Shipping Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-8 pt-8 text-center text-sm text-secondary-200">
+                <p>© 2025 Uganda Heritage Marketplace. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentStep = 1;
+            const totalSteps = 3;
+            
+            const steps = {
+                1: document.getElementById('step1'),
+                2: document.getElementById('step2'),
+                3: document.getElementById('step3')
+            };
+            
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const saveDraftBtn = document.getElementById('saveDraftBtn');
+            const dropZone = document.getElementById('dropZone');
+            const fileInput = document.getElementById('portfolioImages');
+            const imagePreview = document.getElementById('imagePreview');
+            
+            // Update progress indicator
+            function updateProgress() {
+                const progressBar = document.querySelector('.bg-primary');
+                const progressText = document.querySelector('.text-primary');
+                const stepText = document.querySelector('.text-text-secondary');
+                
+                const percentage = (currentStep / totalSteps) * 100;
+                progressBar.style.width = percentage + '%';
+                progressText.textContent = `Step ${currentStep} of ${totalSteps}`;
+                
+                const stepNames = {
+                    1: 'Personal Information',
+                    2: 'Craft Specialization',
+                    3: 'Portfolio Upload'
+                };
+                stepText.textContent = stepNames[currentStep];
+            }
+            
+            // Show/hide steps
+            function showStep(step) {
+                Object.values(steps).forEach(stepEl => stepEl.classList.add('hidden'));
+                steps[step].classList.remove('hidden');
+                
+                // Update button visibility
+                prevBtn.classList.toggle('hidden', step === 1);
+                nextBtn.classList.toggle('hidden', step === totalSteps);
+                submitBtn.classList.toggle('hidden', step !== totalSteps);
+                
+                updateProgress();
+            }
+            
+            // Next button click
+            nextBtn.addEventListener('click', function() {
+                if (validateCurrentStep()) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', function() {
+                currentStep--;
+                showStep(currentStep);
+            });
+            
+            // Validate current step
+            function validateCurrentStep() {
+                const currentStepEl = steps[currentStep];
+                const requiredFields = currentStepEl.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('border-error');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('border-error');
+                    }
+                });
+                
+                // Special validation for step 2 (craft categories)
+                if (currentStep === 2) {
+                    const checkedCategories = currentStepEl.querySelectorAll('input[name="craftCategories"]:checked');
+                    if (checkedCategories.length === 0) {
+                        alert('Please select at least one craft category.');
+                        isValid = false;
+                    }
+                }
+                
+                return isValid;
+            }
+            
+            // File upload handling
+            dropZone.addEventListener('click', () => fileInput.click());
+            
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('border-primary', 'bg-primary-50');
+            });
+            
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('border-primary', 'bg-primary-50');
+            });
+            
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('border-primary', 'bg-primary-50');
+                handleFiles(e.dataTransfer.files);
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                handleFiles(e.target.files);
+            });
+            
+            function handleFiles(files) {
+                const maxFiles = 10;
+                const maxSize = 5 * 1024 * 1024; // 5MB
+                
+                if (files.length > maxFiles) {
+                    alert(`Maximum ${maxFiles} files allowed.`);
+                    return;
+                }
+                
+                imagePreview.innerHTML = '';
+                imagePreview.classList.remove('hidden');
+                
+                Array.from(files).forEach((file, index) => {
+                    if (file.size > maxSize) {
+                        alert(`File ${file.name} is too large. Maximum size is 5MB.`);
+                        return;
+                    }
+                    
+                    if (!file.type.startsWith('image/')) {
+                        alert(`File ${file.name} is not an image.`);
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const preview = document.createElement('div');
+                        preview.className = 'relative group';
+                        preview.innerHTML = `
+                            <img src="${e.target.result}" alt="Preview ${index + 1}" 
+                                 class="w-full h-24 object-cover rounded-heritage">
+                            <button type="button" 
+                                    class="absolute top-1 right-1 bg-error text-white rounded-full w-6 h-6 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-normal"
+                                    onclick="this.parentElement.remove()">×</button>
+                        `;
+                        imagePreview.appendChild(preview);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+            
+            // Save draft functionality
+            saveDraftBtn.addEventListener('click', function() {
+                const formData = new FormData(document.getElementById('artisanRegistrationForm'));
+                // In a real application, this would save to localStorage or send to server
+                alert('Draft saved successfully! You can continue later.');
+            });
+            
+            // Form submission
+            document.getElementById('artisanRegistrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (validateCurrentStep()) {
+                    alert('Registration submitted successfully! You will receive a confirmation email shortly.');
+                    // In a real application, this would submit to server
+                }
+            });
+            
+            // Initialize
+            showStep(1);
+        });
+    </script>
+</body>
+</html>

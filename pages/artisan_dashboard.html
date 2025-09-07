@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artisan Dashboard - Uganda craft hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fugandaher4307back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                        <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-heading font-bold text-text-primary">Uganda Heritage</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product_catalog.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Marketplace</a>
+                    <a href="artisan_profiles.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Artisans</a>
+                    <a href="cultural_heritage_hub.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Heritage Hub</a>
+                    <a href="shopping_cart.html" class="text-text-secondary hover:text-primary transition-colors duration-normal">Cart</a>
+                    <a href="artisan_dashboard.html" class="bg-primary text-white px-4 py-2 rounded-heritage hover:bg-primary-600 transition-colors duration-normal">Dashboard</a>
+                </div>
+
+                <!-- User Profile -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button class="flex items-center space-x-2 text-text-secondary hover:text-primary transition-colors duration-normal">
+                            <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Artisan Profile" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <span class="hidden md:block font-medium">Sarah Nakato</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                    <h1 class="text-3xl font-heading font-bold text-text-primary mb-2">Welcome back, Sarah!</h1>
+                    <p class="text-text-secondary">Here's what's happening with your craft business today</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex flex-col sm:flex-row gap-3">
+                    <button class="bg-primary text-white px-6 py-3 rounded-heritage hover:bg-primary-600 transition-colors duration-normal flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <span>Add New Product</span>
+                    </button>
+                    <button class="border border-primary text-primary px-6 py-3 rounded-heritage hover:bg-primary-50 transition-colors duration-normal flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        <span>Update Inventory</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Total Sales Card -->
+            <div class="bg-white rounded-heritage-lg shadow-medium p-6 border-l-4 border-primary">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-text-secondary">Total Sales</p>
+                        <p class="text-2xl font-heading font-bold text-text-primary">UGX 2,450,000</p>
+                        <p class="text-sm text-success flex items-center mt-1">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            +12% from last month
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 bg-primary-100 rounded-heritage flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Views Card -->
+            <div class="bg-white rounded-heritage-lg shadow-medium p-6 border-l-4 border-accent">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-text-secondary">Product Views</p>
+                        <p class="text-2xl font-heading font-bold text-text-primary">8,247</p>
+                        <p class="text-sm text-success flex items-center mt-1">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            +8% this week
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 bg-accent-100 rounded-heritage flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Ratings Card -->
+            <div class="bg-white rounded-heritage-lg shadow-medium p-6 border-l-4 border-warning">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-text-secondary">Customer Rating</p>
+                        <div class="flex items-center space-x-2">
+                            <p class="text-2xl font-heading font-bold text-text-primary">4.8</p>
+                            <div class="flex space-x-1">
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary mt-1">Based on 127 reviews</p>
+                    </div>
+                    <div class="w-12 h-12 bg-warning-100 rounded-heritage flex items-center justify-center">
+                        <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Orders Card -->
+            <div class="bg-white rounded-heritage-lg shadow-medium p-6 border-l-4 border-secondary">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-text-secondary">Pending Orders</p>
+                        <p class="text-2xl font-heading font-bold text-text-primary">7</p>
+                        <p class="text-sm text-warning flex items-center mt-1">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            Requires attention
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 bg-secondary-100 rounded-heritage flex items-center justify-center">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Recent Activity Feed -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-heading font-semibold text-text-primary">Recent Activity</h2>
+                        <button class="text-primary hover:text-primary-600 text-sm font-medium">View All</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Order Notification -->
+                        <div class="flex items-start space-x-4 p-4 bg-success-50 rounded-heritage border-l-4 border-success">
+                            <div class="w-10 h-10 bg-success-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium text-text-primary">New Order Received</p>
+                                <p class="text-sm text-text-secondary">James Okello ordered 2x Traditional Baskets for UGX 85,000</p>
+                                <p class="text-xs text-text-secondary mt-1">2 hours ago</p>
+                            </div>
+                            <button class="bg-success text-white px-4 py-2 rounded-heritage text-sm hover:bg-success-600 transition-colors duration-normal">
+                                Process Order
+                            </button>
+                        </div>
+
+                        <!-- Customer Message -->
+                        <div class="flex items-start space-x-4 p-4 bg-primary-50 rounded-heritage border-l-4 border-primary">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium text-text-primary">Customer Inquiry</p>
+                                <p class="text-sm text-text-secondary">Mary Achieng asked about custom pottery designs</p>
+                                <p class="text-xs text-text-secondary mt-1">4 hours ago</p>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-heritage text-sm hover:bg-primary-600 transition-colors duration-normal">
+                                Reply
+                            </button>
+                        </div>
+
+                        <!-- Verification Update -->
+                        <div class="flex items-start space-x-4 p-4 bg-warning-50 rounded-heritage border-l-4 border-warning">
+                            <div class="w-10 h-10 bg-warning-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium text-text-primary">Authenticity Badge Progress</p>
+                                <p class="text-sm text-text-secondary">Your portfolio is under review by cultural heritage experts</p>
+                                <p class="text-xs text-text-secondary mt-1">1 day ago</p>
+                            </div>
+                            <button class="bg-warning text-white px-4 py-2 rounded-heritage text-sm hover:bg-warning-600 transition-colors duration-normal">
+                                View Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Management Table -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-heading font-semibold text-text-primary">Your Products</h2>
+                        <div class="flex space-x-3">
+                            <button class="text-primary hover:text-primary-600 text-sm font-medium">Manage All</button>
+                            <button class="bg-primary text-white px-4 py-2 rounded-heritage text-sm hover:bg-primary-600 transition-colors duration-normal">
+                                Add Product
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Table View -->
+                    <div class="hidden md:block overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-surface">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Product</th>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Category</th>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Price</th>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Stock</th>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Status</th>
+                                    <th class="px-4 py-3 text-left text-sm font-medium text-text-secondary">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-accent-200">
+                                <tr class="hover:bg-surface transition-colors duration-normal">
+                                    <td class="px-4 py-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://images.pixabay.com/photos/2016/03/27/19/43/basket-1283199_1280.jpg" alt="Traditional Basket" class="w-12 h-12 rounded-heritage object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <div>
+                                                <p class="font-medium text-text-primary">Traditional Woven Basket</p>
+                                                <p class="text-sm text-text-secondary">Handcrafted storage basket</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm text-text-secondary">Weaving</td>
+                                    <td class="px-4 py-4 text-sm font-medium text-text-primary">UGX 45,000</td>
+                                    <td class="px-4 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-success-100 text-success">
+                                            12 in stock
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-success-100 text-success">
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <div class="flex space-x-2">
+                                            <button class="text-primary hover:text-primary-600 text-sm">Edit</button>
+                                            <button class="text-text-secondary hover:text-text-primary text-sm">View</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-surface transition-colors duration-normal">
+                                    <td class="px-4 py-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Clay Pot" class="w-12 h-12 rounded-heritage object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <div>
+                                                <p class="font-medium text-text-primary">Traditional Clay Pot</p>
+                                                <p class="text-sm text-text-secondary">Water storage vessel</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-sm text-text-secondary">Pottery</td>
+                                    <td class="px-4 py-4 text-sm font-medium text-text-primary">UGX 65,000</td>
+                                    <td class="px-4 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-warning-100 text-warning">
+                                            3 in stock
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-success-100 text-success">
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <div class="flex space-x-2">
+                                            <button class="text-primary hover:text-primary-600 text-sm">Edit</button>
+                                            <button class="text-text-secondary hover:text-text-primary text-sm">View</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Card View -->
+                    <div class="md:hidden space-y-4">
+                        <div class="bg-surface rounded-heritage p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <img src="https://images.pixabay.com/photos/2016/03/27/19/43/basket-1283199_1280.jpg" alt="Traditional Basket" class="w-16 h-16 rounded-heritage object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="flex-1">
+                                    <p class="font-medium text-text-primary">Traditional Woven Basket</p>
+                                    <p class="text-sm text-text-secondary">Weaving • UGX 45,000</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-success-100 text-success">
+                                        12 in stock
+                                    </span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-heritage text-xs font-medium bg-success-100 text-success">
+                                        Active
+                                    </span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary hover:text-primary-600 text-sm">Edit</button>
+                                    <button class="text-text-secondary hover:text-text-primary text-sm">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Panel -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Earnings Summary -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Earnings Summary</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-text-secondary">This Month</span>
+                            <span class="font-medium text-text-primary">UGX 485,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-text-secondary">USD Equivalent</span>
+                            <span class="font-medium text-text-primary">$130.27</span>
+                        </div>
+                        <div class="border-t border-accent-200 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-text-secondary">Available Balance</span>
+                                <span class="font-semibold text-primary">UGX 2,450,000</span>
+                            </div>
+                            <button class="w-full mt-3 bg-primary text-white py-2 rounded-heritage hover:bg-primary-600 transition-colors duration-normal">
+                                Request Payout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Events -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Upcoming Cultural Events</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="font-medium text-text-primary">Kampala Craft Fair</p>
+                            <p class="text-sm text-text-secondary">December 15-17, 2025</p>
+                            <p class="text-xs text-primary mt-1">Apply for booth space</p>
+                        </div>
+                        <div class="border-l-4 border-accent pl-4">
+                            <p class="font-medium text-text-primary">Heritage Month</p>
+                            <p class="text-sm text-text-secondary">January 2026</p>
+                            <p class="text-xs text-accent mt-1">Featured artisan program</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Impact -->
+                <div class="bg-white rounded-heritage-lg shadow-medium p-6">
+                    <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Your Impact</h3>
+                    <div class="space-y-4">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-2xl font-heading font-bold text-text-primary">247</p>
+                            <p class="text-sm text-text-secondary">Happy Customers</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <p class="text-lg font-semibold text-text-primary">15kg</p>
+                                <p class="text-xs text-text-secondary">Materials Recycled</p>
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold text-text-primary">3</p>
+                                <p class="text-xs text-text-secondary">Apprentices Trained</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Pattern Decoration -->
+                <div class="bg-gradient-to-br from-primary-100 to-accent-100 rounded-heritage-lg p-6 text-center">
+                    <div 0 40 2000 class="w-full h-24 bg-repeat opacity-20 mb-4" style="background-image: url('data:image/svg+xml,<svg xmlns=\" http: www.w3.org svg\" viewBox="\&quot;0" 40\" fill="\&quot;%23B8860B\&quot;"><path d="\&quot;M20" 0l10 10-10 10L10 10z\"></path><path d="\&quot;M0" 20l10 10-10 10L-10 30z\"></path><path d="\&quot;M40" 20l10 10-10 10L30 30z\"></path><path d="\&quot;M20" 40l10 10-10 10L10 50z\"></path>'); background-size: 40px 40px;"></div>
+                    <h4 class="font-heading font-semibold text-text-primary mb-2">Preserve Heritage</h4>
+                    <p class="text-sm text-text-secondary">Your crafts help preserve Uganda's rich cultural traditions for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L30 8v24L20 38 10 32V8l10-6z"/>
+                            <path d="M15 12h10v4H15zm0 6h10v4H15zm0 6h10v4H15z" fill="white"/>
+                        </svg>
+                        <span class="ml-2 text-lg font-heading font-bold">Uganda Heritage</span>
+                    </div>
+                    <p class="text-secondary-200 text-sm">Connecting authentic Ugandan crafts with the world</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">For Artisans</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="artisan_registration.html" class="hover:text-white transition-colors duration-normal">Join as Artisan</a></li>
+                        <li><a href="artisan_dashboard.html" class="hover:text-white transition-colors duration-normal">Artisan Dashboard</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Seller Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Marketplace</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="product_catalog.html" class="hover:text-white transition-colors duration-normal">Browse Products</a></li>
+                        <li><a href="artisan_profiles.html" class="hover:text-white transition-colors duration-normal">Meet Artisans</a></li>
+                        <li><a href="cultural_heritage_hub.html" class="hover:text-white transition-colors duration-normal">Heritage Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-heading font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm text-secondary-200">
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-colors duration-normal">Shipping Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-600 mt-8 pt-8 text-center text-sm text-secondary-200">
+                <p>© 2025 Uganda Heritage Marketplace. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dashboard Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate real-time updates
+            function updateMetrics() {
+                const salesElement = document.querySelector('.text-2xl.font-heading.font-bold');
+                if (salesElement && salesElement.textContent.includes('UGX')) {
+                    // Add subtle animation to indicate live data
+                    salesElement.classList.add('animate-pulse');
+                    setTimeout(() => {
+                        salesElement.classList.remove('animate-pulse');
+                    }, 1000);
+                }
+            }
+
+            // Update metrics every 30 seconds
+            setInterval(updateMetrics, 30000);
+
+            // Handle quick action buttons
+            const addProductBtn = document.querySelector('button:contains("Add New Product")');
+            const updateInventoryBtn = document.querySelector('button:contains("Update Inventory")');
+            
+            // Process order buttons
+            const processOrderBtns = document.querySelectorAll('button:contains("Process Order")');
+            processOrderBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.textContent = 'Processing...';
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.textContent = 'Processed';
+                        this.classList.remove('bg-success');
+                        this.classList.add('bg-accent');
+                    }, 2000);
+                });
+            });
+
+            // Reply buttons
+            const replyBtns = document.querySelectorAll('button:contains("Reply")');
+            replyBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Opening message composer...');
+                });
+            });
+
+            // Payout request
+            const payoutBtn = document.querySelector('button:contains("Request Payout")');
+            if (payoutBtn) {
+                payoutBtn.addEventListener('click', function() {
+                    if (confirm('Request payout of UGX 2,450,000?')) {
+                        this.textContent = 'Request Submitted';
+                        this.disabled = true;
+                        this.classList.remove('bg-primary');
+                        this.classList.add('bg-success');
+                    }
+                });
+            }
+
+            // Mobile responsive table handling
+            function handleResponsiveTable() {
+                const table = document.querySelector('table');
+                const mobileCards = document.querySelector('.md\\:hidden');
+                
+                if (window.innerWidth < 768) {
+                    if (table) table.style.display = 'none';
+                    if (mobileCards) mobileCards.style.display = 'block';
+                } else {
+                    if (table) table.style.display = 'table';
+                    if (mobileCards) mobileCards.style.display = 'none';
+                }
+            }
+
+            window.addEventListener('resize', handleResponsiveTable);
+            handleResponsiveTable();
+        });
+    </script>
+</body>
+</html>
